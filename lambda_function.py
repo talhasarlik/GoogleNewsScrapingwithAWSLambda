@@ -53,7 +53,6 @@ def lambda_handler(event, context):
     # Set the url and call BeautifulSoup
     url = f"https://news.google.com/topics/{category_url[category]}?hl=tr&gl=TR&ceid=TR%3Atr"
     html = http.request('GET', url)
-    # html = requests.get(url, headers=url_header)
     soup = BeautifulSoup(html.data, 'html.parser')
     
     # Header list
